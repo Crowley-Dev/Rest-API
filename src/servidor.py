@@ -49,14 +49,14 @@ def _cpf():
     if not parameters.get("cpf"):
         return jsonify(
                 status=400,
-                seu_ip=request.remote_addr,
+                #remote_addr=request.remote_addr,
                 data="Parametros invalidos. Tente: /api?cpf=<cpf>"
             )
 
     if not CPF().validate(parameters.get("cpf")):
         return jsonify(
             status=404,
-            seu_ip=request.remote_addr,
+            #remote_addr=request.remote_addr,
             data="CPF invalido."
         )
 
@@ -70,13 +70,13 @@ def _cpf():
     if response_dict is not None:
         return jsonify(
             status=200,
-            seu_ip=request.remote_addr,
+            #remote_addr=request.remote_addr,
             data=response_dict,
         )
 
     return jsonify(
         status=204,
-        remote_addr=request.remote_addr,
+        #remote_addr=request.remote_addr,
         data="Sem resultados."
     )
 
