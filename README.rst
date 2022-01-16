@@ -28,7 +28,7 @@ instalação
 	git clone https://github.com/Crowley-Dev/Rest-API
 
 
-Um exemplo simples de requisição
+um exemplo simples de requisição
 --------------------------------
 
 .. code-block:: python
@@ -48,3 +48,17 @@ Um exemplo simples de requisição
 	); print(resp.text)
 
 
+response
+--------
+
+.. code-block:: json
+
+	{
+	  "data": {
+	    "cidade": "TEIXEIRA DE FREITAS",
+	    "cpf": "11712979710",
+	    "estado": "BA",
+	    "nome": "BRUNA ALMEIDA LOVO"
+	  },
+	  "status": 200
+	}
