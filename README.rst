@@ -39,11 +39,11 @@ um exemplo simples de requisição
 	url = "http://0.0.0.0:5000/api?cpf={}"
 
 	resp = requests.request(
-		method = "GET",
-		url = url.format("11712979710"),
-		headers = {
-			"Content-Type": "application/json"
-		}
+	    method = "GET",
+	    url = url.format("11712979710"),
+	    headers = {
+	        "Content-Type": "application/json"
+	    }
 
 	); print(resp.text)
 
