@@ -42,16 +42,17 @@ def query_dict(conn, query):
         return key
 
 
+@app.route('/', methods=['GET'])
 @app.route('/api', methods=['GET'])
 def _cpf():
     parameters = request.args
 
     if not parameters.get("cpf"):
         return jsonify(
-                status=400,
-                #remote_addr=request.remote_addr,
-                data="Parametros invalidos. Tente: /api?cpf=<cpf>"
-            )
+            status=400,
+            #remote_addr=request.remote_addr,
+            data="Parametros invalidos. Tente: /api?cpf=<cpf>"
+        )
 
     if not CPF().validate(parameters.get("cpf")):
         return jsonify(
