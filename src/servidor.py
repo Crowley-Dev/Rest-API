@@ -78,7 +78,7 @@ def _cpf():
     return jsonify(
         status=204,
         #remote_addr=request.remote_addr,
-        data="Sem resultados."
+        data="Nao encontrado na nossa base de dados."
     )
 
 
