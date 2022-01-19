@@ -4,8 +4,9 @@ from flask import Flask, request, jsonify, g
 from validate_docbr import CPF
 import sqlite3
 
+cpf = CPF()
 app = Flask(__name__)
-app.config['JSONIFY_PRETTYPRINT_REGULAR'] = True
+app.config["JSONIFY_PRETTYPRINT_REGULAR"] = True
 app.config["DEBUG"] = False
 
 DB_URL = "database/dados.db"
@@ -31,7 +32,7 @@ def query_dict(conn, query):
     response_dict = [
             {
                 "nome": row[0],
-                "cpf": row[1],
+                "cpf": cpf.mask(row[1]),
                 "estado": row[2],
                 "cidade": row[3]
 
@@ -54,7 +55,7 @@ def _cpf():
             data="Parametros invalidos. Tente: /api?cpf=<cpf>"
         )
 
-    if not CPF().validate(parameters.get("cpf")):
+    if not cpf.validate(parameters.get("cpf")):
         return jsonify(
             status=404,
             #remote_addr=request.remote_addr,
