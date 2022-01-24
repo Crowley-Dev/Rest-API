@@ -39,8 +39,8 @@ def query_dict(conn, query):
         } for row in cursor.fetchall()
     ]
 
-    for key in response_dict:
-        return key
+    for obj in response_dict:
+        return obj
 
 
 @app.route('/', methods=['GET'])
