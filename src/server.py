@@ -32,7 +32,7 @@ def query_dict(conn, query):
     response_dict = [
             {
                 "nome": row[0],
-                "cpf": cpf.mask(row[1]),
+                "cpf": row[1],
                 "estado": row[2],
                 "cidade": row[3]
 
