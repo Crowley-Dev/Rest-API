@@ -56,7 +56,7 @@ response
 	{
 	  "data": {
 	    "cidade": "TEIXEIRA DE FREITAS",
-	    "cpf": "117.129.797-10",
+	    "cpf": "11712979710",
 	    "estado": "BA",
 	    "nome": "BRUNA ALMEIDA LOVO"
 	  },
