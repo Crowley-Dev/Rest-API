@@ -1,7 +1,7 @@
 API Rest - Flask
 ================
 
-- **próxima atualização**: *01/02/2022*
+- **próxima atualização**: *××/××/××××*
 - **mudanças na próxima atualização**:
    - *sistema de autenticação de token*
    - *cada token terá um tempo de uso (7d, 15d, 30d)*
